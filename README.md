@@ -1,4 +1,4 @@
-该项目为 dbg-project 的前端，源自 [https://github.com/Armour/vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template)
+该项目为 [dbg-project](https://github.com/DbgDebug/dbg-project) 的前端，源自 [https://github.com/Armour/vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template)
 
 ## 如何设置以及启动项目
 
