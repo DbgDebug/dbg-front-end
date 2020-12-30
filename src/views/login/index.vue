@@ -61,7 +61,7 @@
           v-model="loginForm.verificationCode"
           name="verificationCode"
           type="text"
-          placeholder="验证码sd"
+          placeholder="验证码"
         />
       </el-form-item>
       <img

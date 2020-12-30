@@ -1,5 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path')
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
 
 // If your port is set to 80,
 // use administrator privileges to execute the command line.
@@ -48,6 +50,11 @@ module.exports = {
         path.resolve(__dirname, 'src/styles/_mixins.scss')
       ]
     }
+  },
+  configureWebpack: {
+    plugins: [
+      new MonacoWebpackPlugin()
+    ]
   },
   chainWebpack(config) {
     // provide the app's title in webpack's name field, so that

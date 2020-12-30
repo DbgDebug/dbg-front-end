@@ -86,6 +86,7 @@
         <markdown-editor
           ref="markdownEditor"
           v-model="postForm.markdown"
+          :value="postForm.markdown"
           :language="language"
           :height="bodyHeight"
         />
