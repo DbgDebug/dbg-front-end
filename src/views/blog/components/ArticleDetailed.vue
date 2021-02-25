@@ -131,6 +131,7 @@ export default class extends Vue {
   private isCreate = !this.isEdit
   private submitLabel = ''
   private bodyHeight = '600px'
+  private articleId = 0
 
   get postForm() {
     return this.defaultArticle
@@ -239,7 +240,8 @@ export default class extends Vue {
   private createArticle() {
     (this.$refs.postForm as Form).validate(async valid => {
       if (valid) {
-        await createArticle(this.postForm)
+        const { data } = await createArticle(this.postForm)
+        this.articleId = data
         this.$notify({
           title: 'Success',
           message: 'The post published successfully',
@@ -255,9 +257,16 @@ export default class extends Vue {
   }
 
   private updateArticle() {
+    if (this.articleId === 0) {
+      this.$message({
+        type: 'error',
+        message: '文章未创建无法更新'
+      })
+      return
+    }
     (this.$refs.postForm as Form).validate(async valid => {
       if (valid) {
-        await updateArticle(this.postForm.id, this.postForm)
+        await updateArticle(this.articleId, this.postForm)
         this.$notify({
           title: 'Success',
           message: 'The put updated successfully',
