@@ -1,5 +1,6 @@
 export default {
   route: {
+    program: '代码编辑器',
     giftStatistics: '礼物数据统计',
     articleCategory: '文章分类',
     blogManage: '博客管理',
