@@ -1,5 +1,7 @@
 export default {
   route: {
+    payTest: '支付测试',
+    payModule: '支付模块',
     program: '代码编辑器',
     giftStatistics: '礼物数据统计',
     articleCategory: '文章分类',

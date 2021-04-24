@@ -1,6 +1,6 @@
 import { VuexModule, Module, Action, Mutation, getModule } from 'vuex-module-decorators'
 import { getUserInfo, login, logout } from '@/api/login'
-import { getToken, setToken, removeToken } from '@/utils/cookies'
+import { getToken, setToken, removeToken, getDomain } from '@/utils/cookies'
 import router, { resetRouter } from '@/router'
 import { PermissionModule } from './permission'
 import { TagsViewModule } from './tags-view'
@@ -61,8 +61,8 @@ class User extends VuexModule implements IUserState {
     const response = await login({ username, password })
     const result = JSON.parse(JSON.stringify(response))
     const { data } = result
-    console.log(data)
-    if (result.action === 20000) {
+    console.log(getDomain())
+    if (result.code === 20000) {
       setToken(data.accessToken)
       this.SET_TOKEN(data.accessToken)
     }

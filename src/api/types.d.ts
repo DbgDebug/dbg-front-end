@@ -174,3 +174,40 @@ export interface ArticleDetail {
   status: number,
   tags: ArticleTag[]
 }
+
+export interface Product {
+  productId: number,
+  productName: string,
+  price: number,
+  quantity: number
+}
+
+export interface Order {
+  orderId: number,
+  totalAmount: number,
+  createTime: number,
+  paymentTime: number,
+  deliveryTime: number,
+  expressTime: number,
+  finishTime: number,
+  splitTime: number,
+  splitReason: string,
+  productList: Product[]
+}
+
+export interface ProductForm {
+  productId: number,
+  quantity: number
+}
+
+export interface OrderForm {
+  productList: ProductForm[]
+}
+
+export interface PayQRCode {
+  outTradeNo: string,
+  subject: string,
+  totalAmount: string,
+  qrCodeUrl: string,
+  createTime: number
+}

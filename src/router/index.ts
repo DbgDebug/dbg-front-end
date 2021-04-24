@@ -10,6 +10,7 @@ import permissionRouters from './modules/permission'
 import blogRoutes from './modules/blog'
 import fileRoutes from './modules/file'
 import programRoutes from './modules/program'
+import payRoutes from './modules/pay'
 
 Vue.use(Router)
 
@@ -150,6 +151,7 @@ export const asyncRoutes: RouteConfig[] = [
   programRoutes,
   fileRoutes,
   accountRoutes,
+  payRoutes,
   {
     path: '*',
     redirect: '/404',

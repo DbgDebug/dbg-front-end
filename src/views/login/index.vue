@@ -162,8 +162,8 @@ export default class extends Vue {
   }
 
   private loginForm = {
-    username: '',
-    password: '',
+    username: 'reader',
+    password: '12345678',
     verificationCode: '',
     verificationToken: ''
   }
@@ -217,7 +217,7 @@ export default class extends Vue {
           this.loading = false
         }, 3 * 1000)
         const result = await UserModule.Login(this.loginForm)
-        if (result.action === 20000) {
+        if (result.code === 20000) {
           this.$router.push({
             path: this.redirect || '/',
             query: this.otherQuery

@@ -19,3 +19,4 @@ const tokenKey = 'dbg_token'
 export const getToken = () => Cookies.get(tokenKey)
 export const setToken = (token: string) => Cookies.set(tokenKey, token, domain)
 export const removeToken = () => Cookies.remove(tokenKey, domain)
+export const getDomain = () => domain
