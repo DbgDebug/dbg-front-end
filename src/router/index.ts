@@ -9,8 +9,9 @@ import accountRoutes from './modules/account'
 import permissionRouters from './modules/permission'
 import blogRoutes from './modules/blog'
 import fileRoutes from './modules/file'
-import programRoutes from './modules/program'
+import codeRoutes from './modules/code'
 import payRoutes from './modules/pay'
+import videoRoutes from './modules/video'
 
 Vue.use(Router)
 
@@ -148,10 +149,11 @@ export const asyncRoutes: RouteConfig[] = [
   /** when your routing map is too long, you can split it into small modules **/
   bilibiliRoutes,
   blogRoutes,
-  programRoutes,
+  codeRoutes,
   fileRoutes,
   accountRoutes,
   payRoutes,
+  videoRoutes,
   {
     path: '*',
     redirect: '/404',
