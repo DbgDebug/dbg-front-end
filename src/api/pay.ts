@@ -26,7 +26,7 @@ export const defaultPayQRCode: PayQRCode = {
   subject: '',
   totalAmount: '',
   qrCodeUrl: '',
-  createTime: 0,
+  createTime: 0
 }
 
 export const defaultOrderForm: OrderForm = {

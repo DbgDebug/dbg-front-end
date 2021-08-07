@@ -1,8 +1,12 @@
 export default {
   route: {
+    codeEditor: '代码编辑器',
+    code: '代码',
+    videoList: '视频列表',
+    video: '视频',
     payTest: '支付测试',
     payModule: '支付模块',
-    program: '代码编辑器',
+    program: '程序',
     giftStatistics: '礼物数据统计',
     articleCategory: '文章分类',
     blogManage: '博客管理',
